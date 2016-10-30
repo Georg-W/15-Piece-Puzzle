@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity{
         setContentView(R.layout.activity_main);
         setPictures();
         mDetector = new GestureDetectorCompat(this, new MyGestureListener());
+        checkResult();
     }
 
     private static final String DEBUG_TAG = "Gestures";
@@ -499,7 +500,67 @@ public class MainActivity extends AppCompatActivity{
         }
     }
 
+    void checkResult(){
+        ImageButton imgButton1 = (ImageButton) findViewById(R.id.imageButton1);
+        ImageButton imgButton2 = (ImageButton) findViewById(R.id.imageButton2);
+        ImageButton imgButton3 = (ImageButton) findViewById(R.id.imageButton3);
+        ImageButton imgButton4 = (ImageButton) findViewById(R.id.imageButton4);
+        ImageButton imgButton5 = (ImageButton) findViewById(R.id.imageButton5);
+        ImageButton imgButton6 = (ImageButton) findViewById(R.id.imageButton6);
+        ImageButton imgButton7 = (ImageButton) findViewById(R.id.imageButton7);
+        ImageButton imgButton8 = (ImageButton) findViewById(R.id.imageButton8);
+        ImageButton imgButton9 = (ImageButton) findViewById(R.id.imageButton9);
+        ImageButton imgButton10 = (ImageButton) findViewById(R.id.imageButton10);
+        ImageButton imgButton11 = (ImageButton) findViewById(R.id.imageButton11);
+        ImageButton imgButton12 = (ImageButton) findViewById(R.id.imageButton12);
+        ImageButton imgButton13 = (ImageButton) findViewById(R.id.imageButton13);
+        ImageButton imgButton14 = (ImageButton) findViewById(R.id.imageButton14);
+        ImageButton imgButton15 = (ImageButton) findViewById(R.id.imageButton15);
+        ImageButton imgButton16 = (ImageButton) findViewById(R.id.imageButton16);
 
+
+        Drawable drawable1 = imgButton1.getDrawable();
+        Drawable drawable2 = imgButton2.getDrawable();
+        Drawable drawable3 = imgButton3.getDrawable();
+        Drawable drawable4 = imgButton4.getDrawable();
+        Drawable drawable5 = imgButton5.getDrawable();
+        Drawable drawable6 = imgButton6.getDrawable();
+        Drawable drawable7 = imgButton7.getDrawable();
+        Drawable drawable8 = imgButton8.getDrawable();
+        Drawable drawable9 = imgButton9.getDrawable();
+        Drawable drawable10 = imgButton10.getDrawable();
+        Drawable drawable11 = imgButton11.getDrawable();
+        Drawable drawable12 = imgButton12.getDrawable();
+        Drawable drawable13 = imgButton13.getDrawable();
+        Drawable drawable14 = imgButton14.getDrawable();
+        Drawable drawable15 = imgButton15.getDrawable();
+        Drawable drawable16 = imgButton16.getDrawable();
+
+        if (drawable1.getConstantState().equals(getResources().getDrawable(R.drawable.bayern_0_0).getConstantState()) &&
+            drawable2.getConstantState().equals(getResources().getDrawable(R.drawable.bayern_0_1).getConstantState()) &&
+            drawable3.getConstantState().equals(getResources().getDrawable(R.drawable.bayern_0_2).getConstantState()) &&
+            drawable4.getConstantState().equals(getResources().getDrawable(R.drawable.bayern_0_3).getConstantState()) &&
+            drawable5.getConstantState().equals(getResources().getDrawable(R.drawable.bayern_1_0).getConstantState()) &&
+            drawable6.getConstantState().equals(getResources().getDrawable(R.drawable.bayern_1_1).getConstantState()) &&
+            drawable7.getConstantState().equals(getResources().getDrawable(R.drawable.bayern_1_2).getConstantState()) &&
+            drawable8.getConstantState().equals(getResources().getDrawable(R.drawable.bayern_1_3).getConstantState()) &&
+            drawable9.getConstantState().equals(getResources().getDrawable(R.drawable.bayern_2_0).getConstantState()) &&
+            drawable10.getConstantState().equals(getResources().getDrawable(R.drawable.bayern_2_1).getConstantState()) &&
+            drawable11.getConstantState().equals(getResources().getDrawable(R.drawable.bayern_2_2).getConstantState()) &&
+            drawable12.getConstantState().equals(getResources().getDrawable(R.drawable.bayern_2_3).getConstantState()) &&
+            drawable13.getConstantState().equals(getResources().getDrawable(R.drawable.bayern_3_0).getConstantState()) &&
+            drawable14.getConstantState().equals(getResources().getDrawable(R.drawable.bayern_3_1).getConstantState()) &&
+            drawable15.getConstantState().equals(getResources().getDrawable(R.drawable.bayern_3_2).getConstantState()) &&
+            drawable16.getConstantState().equals(getResources().getDrawable(R.drawable.bayern_3_3).getConstantState())
+           ){
+            Log.d("success", "nicee");
+        }
+        else{
+            Log.d("success", "nope");
+        }
+
+
+    }
 
     @Override
     public boolean onTouchEvent(MotionEvent event){
